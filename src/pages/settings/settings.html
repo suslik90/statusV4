@@ -1,0 +1,89 @@
+<!--
+  Generated template for the Settings page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>-->
+<!--<ion-navbar>-->
+<!--<button ion-button menuToggle>-->
+<!--<ion-icon name="menu"></ion-icon>-->
+<!--</button>-->
+<!--<ion-title>Settings</ion-title>-->
+<!--<ion-buttons end>-->
+<!--<button ion-button icon-only class="checkmark-settings-head">-->
+<!--<ion-icon name="ios-checkmark-outline"></ion-icon>-->
+<!--</button>-->
+<!--</ion-buttons>-->
+<!--</ion-navbar>-->
+<!--</ion-header>-->
+
+
+<ion-content>
+  <ion-fab top left>
+    <button class="transparent-fab-menu" ion-fab mini outline menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-fab>
+  <div class="settings-card header-avatar">
+    <div class="settings-card-content">
+      <div class="settings-avatar to-str"
+           [ngStyle]="{'background-image':'url(assets/img/vin_diesel.jpg)', 'background-size':'cover'}">
+      </div>
+      <div class="name-string">{{User.firstname}} {{User.lastname}}</div>
+    </div>
+  </div>
+  <br/>
+  <div class="settings-card">
+    <div class="settings-card-content">
+      <div class="settings-gender">
+        <div class="subheader">Ваш пол и дата рождения</div>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-50>
+              <button ion-button outline color="light"
+                      [ngClass]="User.gender == 1 ? 'gender-btn  active-man' : 'gender-btn'"
+                      (click)="updateUserGender('1')">
+                <ion-icon name="ios-man-outline"></ion-icon>
+              </button>
+              <button ion-button outline color="light"
+                      [ngClass]="User.gender == 0 ? 'gender-btn  active-woman' : 'gender-btn'"
+                      (click)="updateUserGender('0')">
+                <ion-icon name="ios-woman-outline"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col width-50>
+              <div class="date-of-birthday" (click)="openDataPicker()">{{dateOfBirthday}}</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <!--<img src="assets/img/vin_diesel.jpg">-->
+    </div>
+  </div>
+  <br/>
+  <div class="settings-card ">
+    <div class="settings-card-header">Интересы</div>
+    <div class="settings-card-content">
+      <div class="interests-item-wrap" *ngFor="let interes of User.interests; let i=index;">
+        <div class="interests-item" (click)="openDataPicker()">{{interes.name}}</div>
+        <div class="interests-item-delete">
+          <button ion-button clear color="light" (click)="deleteInteres(index)">
+            <ion-icon name="ios-close-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <button [hidden]="interestsIsFull" color="light" ion-button small full class="add-interests"
+              (click)="addInterests()">Добавить
+      </button>
+    </div>
+  </div>
+  <br/>
+  <div class="settings-card ">
+    <div class="settings-card-header">Город</div>
+    <div class="settings-card-content">
+      <div class="country">{{country}}</div>
+      <div class="city">{{city}}</div>
+    </div>
+  </div>
+</ion-content>

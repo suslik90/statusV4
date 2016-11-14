@@ -1,0 +1,82 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.app-menu {
+  background-color: $status_green;
+
+  ion-list > .item:first-child {
+    border-top: 0;
+  }
+  ion-list .item-inner, ion-list > .item:last-child {
+    border-bottom: 0;
+  }
+  ion-list .item-block .item-inner {
+    border-bottom: 0;
+  }
+  button.item:not([detail-none]) .item-inner {
+    background-image: none;
+  }
+  .btn-menu {
+    background-color: $status_green;
+    color: $status_white;
+
+    .menu-item-icon{
+      display: inline-block;
+    }
+    .menu-text-item{
+      width:90%;
+      display: inline-block;
+      padding-left:20px;
+    }
+  }
+  .blur-avatar-menu-wrap {
+    width: 100%;
+    height: 200px;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    .user-info-on-blur {
+      position: absolute;
+      z-index: 1;
+      margin-top: 85px;
+      margin-left: 30px;
+
+      .circle-avatar-on-blur {
+        width: 100px;
+        height: 60px;
+        background-size: cover;
+        border-radius: 50px;
+      }
+      .username-on-blur {
+        color: $status_white;
+        margin-top: 7px;
+      }
+      .editlink-on-blur {
+        color: $status_white;
+        margin-top: 4px;
+        font-size: 1rem;
+      }
+    }
+
+    .blur-avatar-menu {
+      background-size: cover;
+      width: 102%;
+      height: 210px;
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+      margin: -2% -5% -5% -1%;
+    }
+  }
+}
+

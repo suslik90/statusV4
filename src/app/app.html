@@ -1,0 +1,23 @@
+<ion-menu [content]="content">
+  <ion-content class="app-menu">
+    <div class="blur-avatar-menu-wrap">
+      <div class="user-info-on-blur">
+        <div class="circle-avatar-on-blur" [ngStyle]="{'background-image':'url(assets/img/vin_diesel.jpg)'}"></div>
+        <div class="username-on-blur">Иван Долгополов</div>
+        <div class="editlink-on-blur" menuClose (click)="openSettings()">Редактировать</div>
+      </div>
+      <div class="blur-avatar-menu" [ngStyle]="{'background-image':'url(assets/img/vin_diesel.jpg)'}"></div>
+    </div>
+    <ion-list>
+      <ion-item  menuClose *ngFor="let p of pages" (click)="openPage(p)" class="btn-menu">
+        <!--<button ion-button full outline class="btn-menu">-->
+          <ion-icon class="menu-item-icon" name="{{p.icon}}"></ion-icon>
+          <div class="menu-text-item">{{p.title}}</div>
+        <!--</button>-->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
