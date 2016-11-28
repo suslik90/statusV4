@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { Settings } from '../pages/settings/settings';
 import { Profile } from '../pages/profile/profile';
@@ -38,6 +38,6 @@ import { LoginPage } from '../pages/login/login';
     Contacts,
     LoginPage
   ],
-  providers: [Transliter]
+  providers: [Transliter, {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
