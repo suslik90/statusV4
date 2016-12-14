@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {RewardsDescriptionPage} from "../rewards-description/rewards-description";
 
 /*
   Generated class for the RewardsLine page.
@@ -109,5 +110,9 @@ export class RewardsLine {
         time_to_end: '00:10:01'
       }
     ];
+  }
+
+  openInfoReward(reward){
+    this.navCtrl.push(RewardsDescriptionPage,reward);
   }
 }

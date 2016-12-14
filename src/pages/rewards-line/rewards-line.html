@@ -19,7 +19,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
   </ion-fab>
-  <ion-card *ngFor="let reward of rewards">
+  <ion-card *ngFor="let reward of rewards" (click)="openInfoReward(reward)">
     <div class="stars-rating">Осталось {{reward.time_to_end}}</div>
     <img src="assets/{{reward.img}}"/>
     <div class="progress-percent {{reward.category.color}}">{{reward.category.text}}</div>

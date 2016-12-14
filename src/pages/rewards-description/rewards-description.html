@@ -1,0 +1,30 @@
+<!--
+  Generated template for the RewardsDescription page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{reward.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-fab top right edge>
+    <button ion-fab mini (click)="showBarCode()"><ion-icon name="barcode"></ion-icon></button>
+  </ion-fab>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/{{reward.img}}"/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-90>Транс-музыка стала зарождаться в 80-е годы. Большую популярность транс стал приобретать в начале 90-х в Европе, в таких странах как Германия, Нидерланды, Франция, Бельгия и Великобритания. Изначально транс был мягкой разновидностью техно, но позже отделился в самостоятельный стиль. Стиль получил такое название из-за повторяющихся ритмичных мелодий, которые будто бы погружают слушателя в состояние транса. Транс может звучать на танцевальных мероприятиях как под открытым небом, так и на различных закрытых площадках. Транс очень разносторонний и разнообразный стиль музыки. Его также можно исполнять на акустических (не электронных) инструментах.</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -10,6 +10,8 @@ import { Transliter } from '../services/transliter';
 import { ModalChatDialogPage } from '../pages/modal-chat-dialog/modal-chat-dialog';
 import { Contacts } from '../pages/contacts/contacts';
 import { LoginPage } from '../pages/login/login';
+import { RewardsDescriptionPage } from '../pages/rewards-description/rewards-description';
+import { RewardsBarcodePage } from '../pages/rewards-barcode/rewards-barcode';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { LoginPage } from '../pages/login/login';
     Messages,
     ModalChatDialogPage,
     Contacts,
-    LoginPage
+    LoginPage,
+    RewardsDescriptionPage,
+    RewardsBarcodePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -36,7 +40,9 @@ import { LoginPage } from '../pages/login/login';
     Messages,
     ModalChatDialogPage,
     Contacts,
-    LoginPage
+    LoginPage,
+    RewardsDescriptionPage,
+    RewardsBarcodePage
   ],
   providers: [Transliter, {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

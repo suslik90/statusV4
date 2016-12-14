@@ -1,0 +1,12 @@
+page-rewards-barcode {
+  .barcode {
+    width: 100%;
+    height: 24%;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-size: cover;
+    margin-top: calc(50% + 50px);
+    margin-bottom: 50%;
+    border:1px solid red;
+  }
+}
