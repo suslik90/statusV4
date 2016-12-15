@@ -7,6 +7,8 @@ page-rewards-barcode {
     background-size: cover;
     margin-top: calc(50% + 50px);
     margin-bottom: 50%;
-    border:1px solid red;
+  }
+  ion-content{
+    background-color: white !important;
   }
 }

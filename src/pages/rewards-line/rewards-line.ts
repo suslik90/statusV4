@@ -19,7 +19,7 @@ export class RewardsLine {
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    console.log('Hello RewardsLine Page');
+    // console.log('Hello RewardsLine Page');
   }
   ionViewWillEnter() {
     this.loadPage();
@@ -114,5 +114,11 @@ export class RewardsLine {
 
   openInfoReward(reward){
     this.navCtrl.push(RewardsDescriptionPage,reward);
+  }
+
+  addToMe(event:Event){
+    // event.preventDefault();
+    event.stopPropagation();//
+    console.log('add');
   }
 }
